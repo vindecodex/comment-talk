@@ -4,14 +4,16 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+	"client": "node ./client/client.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^3.0.4"
+    "socket.io": "^3.0.4",
+    "socket.io-client": "^3.0.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

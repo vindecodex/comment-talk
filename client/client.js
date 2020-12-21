@@ -1,13 +1,14 @@
-const io = require('socket.io-client')
+const io = require('socket.io-client');
 
-const socket = io('http://localhost:1818');
+const socket = io('http://locallhost:1818');
 
-socket.open();
-
-socket.on("connect", () => {
-	console.log(socket.id);
+socket.on('connect', () => {
+	console.log(socket.connected);
 })
 
-socket.on("disconnect", () => {
-	console.log(socket.id);
-})
+setInterval(() => {
+	console.log("A")
+	socket.emit("ping", () => {
+		console.log("pong");
+	})
+}, 2000);

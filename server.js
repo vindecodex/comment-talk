@@ -1,11 +1,16 @@
-const app = require('express')();
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const { Server } = require('socket.io');
 
+const io = new Server(1818);
 
+io.on("connection", (socket) => {
+  console.log(`connect ${socket.id}`);
 
-io.on('connect', () => {
-	console.log('a user connected');
+  socket.on("ping", (cb) => {
+    console.log("ping");
+    cb();
+  });
+
+  socket.on("disconnect", () => {
+    console.log(`disconnect ${socket.id}`);
+  });
 });
-
-app.listen(1818)

@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon .",
-	"client": "node ./client/client.js"
+    "start:ioserver": "nodemon .",
+	"start:ioclient": "node ./client/client.js",
+	"start:api": "node ./api/server.js"
   },
   "keywords": [],
   "author": "",

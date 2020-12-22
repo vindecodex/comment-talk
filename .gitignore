@@ -1,4 +1,7 @@
 
 # npm
 node_modules/
+app/node_modules/
 package-lock.json
+app/yarn.lock
+app/.gitignore

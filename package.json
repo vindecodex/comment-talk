@@ -2,10 +2,10 @@
   "name": "comment-talk",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./io_server/server.js",
   "scripts": {
     "start:ioserver": "nodemon .",
-	"start:ioclient": "node ./client/client.js",
+	"start:ioclient": "node ./io_client/client.js",
 	"start:api": "node ./api/server.js"
   },
   "keywords": [],

@@ -1,9 +1,14 @@
 const app = require('express')();
-const Chat = require('./data.js');
+const Chats = require('./data.js');
 
 app.get('/', (req,res) => {
-	console.log(Chat);
-	res.status(200).json(Chat);
+	console.log('Welcome to API');
+	res.send('Welcome to API');
+})
+
+app.get('/chats', (req,res) => {
+	console.log(Chats);
+	res.status(200).json(Chats);
 })
 
 app.listen(9001,() => {

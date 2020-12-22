@@ -1,4 +1,4 @@
-const Chat = [
+const Chats = [
 	{
 		id: 1,
 		name: "juan",
@@ -11,4 +11,4 @@ const Chat = [
 	}
 ]
 
-module.exports.Chat = Chat;
+module.exports.Chats = Chats;
